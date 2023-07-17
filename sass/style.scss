@@ -27,6 +27,11 @@ body {
     align-items: center;
     text-align: center;
 
+    @media screen and (max-width: 1000px) {
+        width: 300px;
+        min-width: 300px;
+    }
+
     .primerLinea{
         display: flex;
         position: relative;
@@ -70,6 +75,9 @@ body {
                 line-height: 50px;
                 color: $cuartoColor;
                 font-weight: 900;
+                @media screen and (max-width: 1000px) {
+                    font-size: 0.8em;
+                }
             }
             
         }
@@ -96,6 +104,10 @@ body {
                 line-height: 40px;
                 color: $cuartoColor;
                 font-weight: 900;
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 0.8em;
+                }
             }
         }
         
@@ -108,11 +120,15 @@ body {
         color: $cuartoColor;
         border-top-width: 0px;
         border-right-width: 5px;
-        border-bottom-width: 5px;
+        border-bottom-width: 0px;
         border-left-width: 5px;
         border-style: solid;
         border-color: $cuartoColor;
         position: relative;
+
+        @media screen and (max-width: 1000px) {
+            height: 350px;
+        }
 
         .img-grande{
             clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);
@@ -120,13 +136,21 @@ body {
             height: 500px;
             position: absolute;
             background-color: $cuartoColor;
+            
+            @media screen and (max-width: 1000px) {
+                height: 350px;
+            }
                 
             img{
                 width: 100%;
-                clip-path: polygon(0% 0%, 99% 0%, 53% 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 98% 0%, 71% 100%, 0% 100%);
                 position: absolute;
                 top: 0; left: 0;
                 object-fit: cover;
+
+                @media screen and (max-width: 1000px) {
+                    height: 350px;
+                }
             }
             
         }
@@ -141,10 +165,126 @@ body {
             display: flex;
             align-items: center;
 
+            @media screen and (max-width: 1000px) {
+                padding: 190px 5px 5px 30px;
+                line-height: 0.9;
+            }
+            
+
             p{
                 font-size: 1.6em;
                 font-weight: 700;
+                @media screen and (max-width: 1000px) {
+                    font-size: 0.7em;
+                }
             }
         }
+    }
+
+    .cuartaLinea{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: $primerColor;
+        color: $cuartoColor;
+        border-top-width: 5px;
+        border-right-width: 5px;
+        border-bottom-width: 5px;
+        border-left-width: 5px;
+        border-style: solid;
+        padding: 20px;
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+        }
+
+        .info-pri{
+            padding: 5px;
+            text-align: justify;
+            font-size: 1.2em;
+            @media screen and (max-width: 1000px) {
+                font-size: 0.8em;
+            }
+        }
+
+        .info-sec{
+            .comentario{
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                
+                
+                img{
+                    width: 300px;
+                    @media screen and (max-width: 1000px) {
+                        width: 150px;
+                    }
+                }
+
+                .dialogo-v{
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -65%);
+                    width: 300px;
+                    padding: 20px;
+                    font-size: 1.4em;
+                    font-weight: 800;
+                    @media screen and (max-width: 1000px) {
+                        width: 150px;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+
+            p{
+                font-size: 1.2em;
+                text-align: justify;
+                @media screen and (max-width: 1000px) {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+
+    .quintaLinea{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        top: 0; left: 0;
+        background-color: $cuartoColor;
+        color: $cuartoColor;
+        border-top-width: 0px;
+        border-right-width: 5px;
+        border-bottom-width: 0px;
+        border-left-width: 5px;
+        border-style: solid;
+        @media screen and (max-width: 1000px) {
+            height: 25px;
+        }
+
+        .autor{
+            width: 45%;
+            background-color: $primerColor;
+            clip-path:polygon(0% 0%, 70% 0%, 75% 100%, 0% 100%);
+            border-top-width: 5px;
+            border-right-width: 0px;
+            border-bottom-width: 5px;
+            border-left-width: 0px;
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+                height: 25px;
+            }
+            h3{
+                color: $cuartoColor;
+                text-align: start;
+                line-height: 40px;
+                padding-left: 20px;
+                @media screen and (max-width: 1000px) {
+                    line-height: 25px;
+                    font-size: 0.7em;
+                }
+            }
+        }
+
     }
 }

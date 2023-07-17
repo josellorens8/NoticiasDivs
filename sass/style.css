@@ -259,7 +259,7 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .container .quintaLinea {
-    height: 25px;
+    height: 30px;
   }
 }
 .container .quintaLinea .autor {

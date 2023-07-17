@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+}
+$primerColor : #ffffff;
+$segundoColor : #1d1d1b;
+$tercerColor : #e71d73;
+$cuartoColor : #572484;
+$gradiente : linear-gradient(90deg, rgba(231,29,115,1) 0%, rgba(87,36,131,1) 60%);
+
+body {
+    background-color: $segundoColor;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px;
+}
+
+.container{
+    background-color: $cuartoColor;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .primerLinea{
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        background-color: $cuartoColor;
+        border-top-width: 5px;
+        border-right-width: 5px;
+        border-bottom-width: 0px;
+        border-left-width: 5px;
+        border-style: solid;
+        border-color: $cuartoColor;
+
+        .fecha{
+            background-color: $primerColor;
+            width: 100%;
+            height: 50px;
+            clip-path: polygon(0% 0%, 29% 0%, 34% 100%, 0% 100%);
+            position: absolute;
+            
+
+            h3{
+                width: 30%;
+                float: left;
+                line-height: 50px;
+                color: $cuartoColor;
+                font-weight: 900;
+            }
+        }
+    
+        .nombreDelEquipo{
+            width: 100%;
+            height: 50px;
+            background-color: $primerColor;
+            clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 35% 100%);
+            position: absolute;
+            align-items: center;
+            h3{
+                width: 70%;
+                float: right;
+                line-height: 50px;
+                color: $cuartoColor;
+                font-weight: 900;
+            }
+            
+        }
+    }
+    
+    .segundaLinea{
+        background-color: $primerColor;
+        width: 100%;
+        height: 50px;
+        color: $cuartoColor;
+        border-top-width: 5px;
+        border-right-width: 5px;
+        border-bottom-width: 5px;
+        border-left-width: 5px;
+        border-style: solid;
+        border-color: $cuartoColor;
+        position: relative;
+
+        .titulo{
+            height: 50px;
+            position: absolte;
+            h3{
+                width: 100%;
+                line-height: 40px;
+                color: $cuartoColor;
+                font-weight: 900;
+            }
+        }
+        
+    }
+
+    .tercerLinea{
+        background-color: $primerColor;
+        width: 100%;
+        height: 500px;
+        color: $cuartoColor;
+        border-top-width: 0px;
+        border-right-width: 5px;
+        border-bottom-width: 5px;
+        border-left-width: 5px;
+        border-style: solid;
+        border-color: $cuartoColor;
+        position: relative;
+
+        .img-grande{
+            clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);
+            width: 80%;
+            height: 500px;
+            position: absolute;
+            background-color: $cuartoColor;
+            
+            .fondoimagen{
+                width: 100%;
+                clip-path: polygon(0% 0%, 98% 0%, 72% 63%, 0% 63%);
+                position: absolute;
+                img{
+                    top: 0; left: 0;
+                    object-fit: cover;
+                    
+                    
+                }
+            }
+            
+        }
+
+        .copete{
+            width: 20%;
+            float: right;
+            clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+            background-color: #e71d73;
+        }
+    }
+}

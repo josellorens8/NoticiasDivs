@@ -5,13 +5,43 @@
 }
 
 body {
-  background-color: #1d1d1b;
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 50px;
 }
 
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-120deg, #e71d73 50%, #572483 50%);
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1000;
+  overflow: hidden;
+  width: 200%;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 .container {
   background-color: #572484;
   width: 800px;
@@ -138,8 +168,8 @@ body {
 }
 .container .tercerLinea .img-grande img {
   width: 100%;
-  -webkit-clip-path: polygon(0% 0%, 98% 0%, 71% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 98% 0%, 71% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 99% 0%, 54% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 99% 0%, 54% 100%, 0% 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -149,6 +179,8 @@ body {
 @media screen and (max-width: 1000px) {
   .container .tercerLinea .img-grande img {
     height: 350px;
+    -webkit-clip-path: polygon(0% 0%, 97% 0%, 71% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 97% 0%, 71% 100%, 0% 100%);
   }
 }
 .container .tercerLinea .copete {
